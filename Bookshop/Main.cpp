@@ -25,12 +25,12 @@ void main(array<String^>^ args)
 
             Bookshop::MainForm mainForm(user);
             if (mainForm.ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-                user = nullptr; // Usuñ u¿ytkownika po wylogowaniu
+                user = nullptr; // delete user after logout
             }
         }
         else {
             MessageBox::Show("Authentication Canceled", "Main.cpp", MessageBoxButtons::OK);
-            break; // Wyjœcie z pêtli po anulowaniu uwierzytelnienia
+            break; // exit loop
         }
     }
 	}
